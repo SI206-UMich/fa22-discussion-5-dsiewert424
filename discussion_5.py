@@ -129,6 +129,11 @@ class TestAllMethods(unittest.TestCase):
 		mx_price = Costco.get_max_price()
 		self.assertEqual(mx_price, self.item2)
 
+		Costco.add_item(self.item5)
+		self.item5.price = 7
+		mx_price = Costco.get_max_price()
+		self.assertEqual(mx_price, self.item5)
+
 		pass
 		
 
