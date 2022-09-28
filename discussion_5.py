@@ -109,6 +109,10 @@ class TestAllMethods(unittest.TestCase):
 		mx_stock = Costco.get_max_stock()
 
 		self.assertEqual(mx_stock, self.item3)
+
+		self.item3.stock = 0
+		mx_stock = Costco.get_max_stock()
+		self.assertEqual(mx_stock, self.item2)
 		
 
 		pass
